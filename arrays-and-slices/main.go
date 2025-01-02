@@ -57,4 +57,12 @@ func main() {
 
 	fmt.Println(sort.IntsAreSorted(highScores)) //return if slice is sorted
 
+	var courses = []string{"reactjs", "javascript", "java", "spring-boot", "python"}
+
+	//remove value from slice based on index
+	fmt.Println("courses ", courses)
+	var index int = 2
+	courses = append(courses[:index], courses[index+1:]...)
+	fmt.Println("courses after removing element ", courses)
+
 }
