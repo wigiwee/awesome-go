@@ -1,0 +1,2 @@
+Writing this to abc.txt
+appnding this to the file
