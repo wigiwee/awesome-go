@@ -88,7 +88,7 @@ func streamFile() error {
 		return err
 	}
 
-	binary.Write(conn, binary.LittleEndian, len(fileContent))
+	binary.Write(conn, binary.LittleEndian, int64(len(fileContent)))
 	n, err := io.Copy(conn, bytes.NewReader(fileContent))
 	if err != nil {
 		return err
