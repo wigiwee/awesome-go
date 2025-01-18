@@ -6,23 +6,23 @@ import (
 	"time"
 )
 
-func main() {
+// func main() {
 
-	fmt.Println("Go context")
-	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
-	defer cancel()
+// 	fmt.Println("Go context")
+// 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+// 	defer cancel()
 
-	ctx = enrichContext(ctx)
+// 	ctx = enrichContext(ctx)
 
-	go processRequest(ctx)
-	select {
-	case <-ctx.Done():
-		fmt.Println("Oh no request timeout, took more than 2 sec")
-	}
+// 	go processRequest(ctx)
+// 	select {
+// 	case <-ctx.Done():
+// 		fmt.Println("Oh no request timeout, took more than 2 sec")
+// 	}
 
-	time.Sleep(2 * time.Second)
+// 	time.Sleep(2 * time.Second)
 
-}
+// }
 
 func processRequest(ctx context.Context) {
 
